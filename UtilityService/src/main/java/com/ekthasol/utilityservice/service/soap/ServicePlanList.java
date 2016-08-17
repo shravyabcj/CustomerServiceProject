@@ -11,7 +11,7 @@ import com.ekthasol.utilityservice.webservice.ServicePlan;
 
 public class ServicePlanList {
 
-	final static Logger logger = Logger.getLogger(RegistrationService.class);
+	
 	
 	public List<ServicePlan> getServicePlan() {
 
@@ -21,8 +21,6 @@ public class ServicePlanList {
 
 		List<ServicePlan> serviceList = service.getServicePlan();
 
-		logger.info("Retrieved Services");
-	
 		return serviceList;
 	}
 
