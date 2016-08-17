@@ -7,6 +7,7 @@
 <title>Registration</title>
 </head>
 <body>
+<h3>Registration page</h3>
 	<form method="post" action="addCustomer">
 						<div>
 						<label>First Name</label>

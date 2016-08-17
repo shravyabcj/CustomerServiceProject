@@ -13,14 +13,6 @@ import com.ekthasol.utilityservice.service.rest.CustomerService;
 
 public class MockitoTestCase {
 
-	/*@Test
-	public void test() {
-		Customer customer = new Customer();
-		RegistrationService rsg = Mockito.mock(RegistrationService.class);
-		when(rsg.saveCustomer(customer)).thenReturn(43);
-		assertEquals(rsg.saveCustomer(customer), 43);
-	}*/
-
 	@Test
 	public void testGetCustomer() {
 		Customer customer = new Customer();
