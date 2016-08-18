@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.ekthasol.utilityservice.model.registration.Customer;
 
 /**
- * @author Shravya Peddiraju
- *	DAO class to insert the customer details in the database. 
+ * @author Shravya Peddiraju 
+ * DAO class to insert the customer details in the
+ * database.
  */
 public class RegistrationDao {
-	
+
 	@Autowired
 	SessionFactory sessionFactory;
 
@@ -22,7 +23,7 @@ public class RegistrationDao {
 		Session session = sessionFactory.openSession();
 		try {
 			Transaction trans = session.beginTransaction();
-			cust_id = (Integer) session.save(customer);
+			cust_id = (int) session.save(customer);
 			trans.commit();
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block

@@ -9,16 +9,16 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.log4j.Logger;
 
-import com.ekthasol.customerservice.dao.CustomerServiceDAO;
+import com.ekthasol.customerservice.dao.CustomerRestServiceDAO;
 import com.ekthasol.customerservice.model.Customer;
 
 /**
- * @author Shravya Peddiraju
- * Rest service provider.
+ * @author Shravya Peddiraju 
+ * Rest service provider to get customer details by id.
  */
 @Path("/customer")
 public class CustomerRestService {
-	
+
 	final static Logger logger = Logger.getLogger(CustomerRestService.class);
 
 	@GET
@@ -26,10 +26,12 @@ public class CustomerRestService {
 	@HeaderParam(value = "content-type = application/octet-stream")
 	@Path("/{param}")
 	public Customer getCustomer(@PathParam("param") int custID) {
-		Customer customer = CustomerServiceDAO.getCustomer(custID);
 		
-		logger.info("Customer Details");
-		
+		CustomerRestServiceDAO customerService = new CustomerRestServiceDAO();
+		Customer customer = customerService.getCustomer(custID);
+
+		logger.info("Retrieved Details");
+
 		return customer;
 	}
 }

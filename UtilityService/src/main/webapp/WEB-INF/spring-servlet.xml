@@ -22,7 +22,7 @@
 	
 	</bean>
 	
-	<bean id="registrationService" class="com.ekthasol.utilityservice.service.registration.RegistrationService">
+	<bean id="customerService" class="com.ekthasol.utilityservice.service.registration.CustomerService">
 		<constructor-arg name="registrationDao" ref="registrationDao"/>
 		<constructor-arg name="jmsQueueSender" ref="jmsQueueSender"></constructor-arg>
 	</bean>

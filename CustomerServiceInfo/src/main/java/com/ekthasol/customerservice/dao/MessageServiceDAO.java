@@ -8,30 +8,30 @@ import com.ekthasol.customerservice.util.HibernateUtil;
 
 /**
  * @author Shravya Peddiraju
+ * JMS service DAO class to update the service plan id for the given customer ID 
+ * in the database.
  */
 public class MessageServiceDAO {
+	
+	/**
+	 * Method to update service id for the given customer id in the database.
+	 * @param c_id
+	 * @param serv_id
+	 */
+	public void updateCustomer(int c_id, int serv_id) {
 
-	public int saveCustomerService(int c_id, int serv_id) {
-
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-		// Customer cust = new Customer();
-
+		Session session = HibernateUtil.getSession();
 		session.getTransaction().begin();
-		int row = 0;
 		try {
-
+			
 			Customer cust = (Customer) session.get(Customer.class, c_id);
 			cust.setServiceID(String.valueOf(serv_id));
-			System.out.println(cust.getServiceID());
 			session.update(cust);
-
-			System.out.println(row);
 			session.getTransaction().commit();
+			
 		} catch (HibernateException e) {
 			e.printStackTrace();
-
 			session.close();
 		}
-		return row;
 	}
 }

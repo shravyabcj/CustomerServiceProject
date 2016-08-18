@@ -7,49 +7,51 @@
 <title>Registration</title>
 </head>
 <body>
-<h3>Registration page</h3>
+	<h3>Registration page</h3>
 	<form method="post" action="addCustomer">
-						<div>
-						<label>First Name</label>
-						</div>
-						
-						<div>
-						<input type="text" name="firstName" />
-						</div>
-						
-						<div>
-						<label>Last Name</label>
-						</div>
-						
-						<div>
-						<input type="text" name="lastName" />
-						</div>
-						
-						<div>
-						<label>Email</label>
-						</div>
-						
-						<div>
-						<input type="email" name="email" />
-						</div>
-						
-						<div>
-						<label>User Name</label>
-						</div>
-						
-						<div>
-						<input type="text" name="username" />
-						</div>
-						
-						<div>
-						<label>Password</label>
-						</div>
-						
-						<div>
-						<input type="password" name="password" />
-						</div>
-						
-						<div><input type="submit" value="Submit" /></div>
+		<div>
+			<label>First Name</label>
+		</div>
+
+		<div>
+			<input type="text" name="firstName" />
+		</div>
+
+		<div>
+			<label>Last Name</label>
+		</div>
+
+		<div>
+			<input type="text" name="lastName" />
+		</div>
+
+		<div>
+			<label>Email</label>
+		</div>
+
+		<div>
+			<input type="email" name="email" />
+		</div>
+
+		<div>
+			<label>User Name</label>
+		</div>
+
+		<div>
+			<input type="text" name="username" />
+		</div>
+
+		<div>
+			<label>Password</label>
+		</div>
+
+		<div>
+			<input type="password" name="password" />
+		</div>
+
+		<div>
+			<input type="submit" value="Submit" />
+		</div>
 	</form>
 </body>
 </html>

@@ -9,9 +9,9 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
 /**
- * @author Shravya Peddiraju
- * Entity class of Customer
+ * @author Shravya Peddiraju Entity class of Customer
  */
 @XmlRootElement
 @Entity
@@ -133,4 +133,11 @@ public class Customer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	@Override
+	public String toString() {
+		return  firstName + "," + lastName + "," + email + ","
+				+ username ;
+	}
+	
 }

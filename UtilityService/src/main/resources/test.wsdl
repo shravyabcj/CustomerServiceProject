@@ -45,7 +45,7 @@
 </wsdl:binding>
 <wsdl:service name="CustomerSoapServiceService">
 <wsdl:port binding="tns:CustomerSoapServiceServiceSoapBinding" name="CustomerSoapServicePort">
-<soap:address location="http://localhost:8080/CustomerServiceInfo/services/customer"/>
+<soap:address location="http://localhost:8080/CustomerServiceInfo/SoapWS/customer"/>
 </wsdl:port>
 </wsdl:service>
 </wsdl:definitions>

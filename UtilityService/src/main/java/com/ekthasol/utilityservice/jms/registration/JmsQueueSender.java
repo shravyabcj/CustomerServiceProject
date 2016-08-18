@@ -12,20 +12,19 @@ import org.springframework.stereotype.Component;
 
 @Component("queueSender")
 public class JmsQueueSender {
-	
+
 	@Autowired
 	private JmsTemplate jmsTemplate;
 
-	 public void sendMessage(final String text) {
-	      
-		    this.jmsTemplate.send(new MessageCreator() {
-		      @Override
-		      public Message createMessage(Session session) throws JMSException {
-		        Message message = session.createTextMessage(text);     
-		        //set ReplyTo header of Message, pretty much like the concept of email.
-		        message.setJMSReplyTo(new ActiveMQQueue("Recv2Send"));
-		        return message;
-		      }
-		    });
-	 }
+	public void sendMessage(final String text) {
+
+		this.jmsTemplate.send(new MessageCreator() {
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				Message message = session.createTextMessage(text);
+				message.setJMSReplyTo(new ActiveMQQueue("Recv2Send"));
+				return message;
+			}
+		});
+	}
 }

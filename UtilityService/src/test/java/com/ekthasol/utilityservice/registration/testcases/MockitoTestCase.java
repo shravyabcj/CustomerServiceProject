@@ -7,8 +7,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import com.ekthasol.utilityservice.model.registration.Customer;
-import com.ekthasol.utilityservice.service.registration.RegistrationService;
-import com.ekthasol.utilityservice.service.rest.CustomerService;
+import com.ekthasol.utilityservice.service.registration.CustomerService;
 
 
 public class MockitoTestCase {
