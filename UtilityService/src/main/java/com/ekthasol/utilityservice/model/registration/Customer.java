@@ -11,7 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
- * @author Shravya Peddiraju Entity class of Customer
+ * @author Shravya Peddiraju 
+ * Entity class of Customer
  */
 @XmlRootElement
 @Entity

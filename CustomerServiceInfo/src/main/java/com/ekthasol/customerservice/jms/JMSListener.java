@@ -35,16 +35,6 @@ public class JMSListener implements SessionAwareMessageListener<TextMessage> {
 			MessageService messService = new MessageService();
 
 			messService.setCustomerService(c_id, serv_id);
-
-			/*
-			 * ActiveMQTextMessage textMessage = new ActiveMQTextMessage(); if
-			 * (update > 0) textMessage.setText("ACK"); else
-			 * textMessage.setText("Failed to insert");
-			 * 
-			 * MessageProducer producer =
-			 * session.createProducer(message.getJMSReplyTo());
-			 * producer.send(textMessage);
-			 */
 		}
 	}
 }

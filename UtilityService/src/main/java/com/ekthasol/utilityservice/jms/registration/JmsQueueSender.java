@@ -10,6 +10,10 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Shravya Peddiraju
+ * 
+ */
 @Component("queueSender")
 public class JmsQueueSender {
 

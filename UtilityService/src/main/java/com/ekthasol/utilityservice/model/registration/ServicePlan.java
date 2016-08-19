@@ -6,7 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @author Shravya Peddiraju Entity class of ServicePlan
+ * @author Shravya Peddiraju 
+ * Entity class of ServicePlan
  */
 @Entity
 @Table(name = "service_plan")

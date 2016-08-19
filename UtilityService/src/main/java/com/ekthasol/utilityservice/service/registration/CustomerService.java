@@ -13,8 +13,9 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 /**
- * @author Shravya Peddiraju Service class which includes all the service calls
- *         of rest, soap and JMS
+ * @author Shravya Peddiraju 
+ * Service class which includes all the service calls
+ * of rest, soap and JMS
  */
 public class CustomerService {
 
@@ -49,16 +50,15 @@ public class CustomerService {
 	}
 
 	/**
-	 * @return
+	 * Soap call to get the serviceplan list 
+	 * from the CustomerServiceInfo application.
+	 * @return list of serviceplans.
 	 */
 	public List<ServicePlan> getServicePlan() {
 
 		CustomerSoapServiceService customerSoapService = new CustomerSoapServiceService();
-
 		CustomerSoapService service = customerSoapService.getCustomerSoapServicePort();
-
 		List<ServicePlan> serviceList = service.getServicePlan();
-
 		return serviceList;
 	}
 

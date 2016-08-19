@@ -22,14 +22,14 @@ public class RegistrationDao {
 		int cust_id = 0;
 		Session session = sessionFactory.openSession();
 		try {
-			Transaction trans = session.beginTransaction();
+			//Transaction trans = session.beginTransaction();
 			cust_id = (int) session.save(customer);
-			trans.commit();
-		} catch (HibernateException e) {
+			//trans.commit();
+			} catch (HibernateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		session.close();
+		//session.close();
 		return cust_id;
 	}
 }
