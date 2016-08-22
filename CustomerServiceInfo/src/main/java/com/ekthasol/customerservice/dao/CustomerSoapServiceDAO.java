@@ -32,7 +32,6 @@ public class CustomerSoapServiceDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		session.flush();
 		return serviceList;
 	}
 }

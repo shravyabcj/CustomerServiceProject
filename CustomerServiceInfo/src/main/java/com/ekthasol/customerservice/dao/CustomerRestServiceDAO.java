@@ -34,7 +34,6 @@ public class CustomerRestServiceDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		session.flush();
 		return cust;
 	}
 }
