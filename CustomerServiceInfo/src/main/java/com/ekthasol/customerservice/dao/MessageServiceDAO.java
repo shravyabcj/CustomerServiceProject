@@ -1,7 +1,9 @@
 package com.ekthasol.customerservice.dao;
 
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import com.ekthasol.customerservice.model.Customer;
 import com.ekthasol.customerservice.util.HibernateUtil;
@@ -21,17 +23,15 @@ public class MessageServiceDAO {
 	public void updateCustomer(int c_id, int serv_id) {
 
 		Session session = HibernateUtil.getSession();
-		session.getTransaction().begin();
 		try {
-			
+			Transaction trans = session.beginTransaction();
 			Customer cust = (Customer) session.get(Customer.class, c_id);
 			cust.setServiceID(String.valueOf(serv_id));
 			session.update(cust);
-			session.getTransaction().commit();
+			trans.commit();
 			
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			session.close();
 		}
 	}
 }

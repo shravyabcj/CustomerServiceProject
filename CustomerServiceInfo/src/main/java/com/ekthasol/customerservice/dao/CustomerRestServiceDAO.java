@@ -26,16 +26,15 @@ public class CustomerRestServiceDAO {
 		Session session = HibernateUtil.getSession();
 
 		try {
-			//Transaction trans = session.beginTransaction();
 			Query query = session.createQuery("from Customer where  id= :id ");
 			query.setParameter("id", custID);
 			cust = (Customer) query.list().get(0);
-			//trans.commit();
 
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		session.flush();
 		return cust;
 	}
 }

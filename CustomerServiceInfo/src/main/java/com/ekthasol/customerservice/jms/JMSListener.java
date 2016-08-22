@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 import com.ekthasol.customerservice.service.MessageService;
 
 /**
- * @author Shravya Peddiraju JMS listener class to retrieve the messages from
- *         the sender and update service id to the given customer id.
+ * @author Shravya Peddiraju 
+ * JMS listener class to retrieve the messages from
+ * the sender and update service id to the given customer id.
  */
 @Component("JMSListener")
 public class JMSListener implements SessionAwareMessageListener<TextMessage> {

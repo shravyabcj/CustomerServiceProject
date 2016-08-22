@@ -38,17 +38,17 @@ public class Customer {
 		this.id = id;
 	}
 
-	@Column(name = "FIRST_NAME", unique = true, nullable = true)
+	@Column(name = "FIRST_NAME", nullable = true)
 	private String firstName;
-	@Column(name = "LAST_NAME", unique = true, nullable = true)
+	@Column(name = "LAST_NAME", nullable = true)
 	private String lastName;
-	@Column(name = "EMAIL", unique = true, nullable = true)
+	@Column(name = "EMAIL", nullable = true)
 	private String email;
-	@Column(name = "USERNAME", unique = true, nullable = true)
+	@Column(name = "USERNAME", nullable = true)
 	private String username;
-	@Column(name = "PASSWORD", unique = true, nullable = true)
+	@Column(name = "PASSWORD", nullable = true)
 	private String password;
-	@Column(name = "SERVICEID", unique = true, nullable = true)
+	@Column(name = "SERVICEID", nullable = true)
 	private String serviceID;
 
 	public String getServiceID() {
