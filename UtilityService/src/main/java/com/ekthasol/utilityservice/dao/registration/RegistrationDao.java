@@ -18,6 +18,12 @@ public class RegistrationDao {
 	@Autowired
 	SessionFactory sessionFactory;
 
+	/**
+	 * @param customer
+	 * @return customerID
+	 * This method inserts the customer details 
+	 * and gets the customerID.
+	 */
 	public int insertCustomer(Customer customer) {
 		int cust_id = 0;
 		Session session = sessionFactory.openSession();

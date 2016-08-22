@@ -12,7 +12,6 @@ import com.ekthasol.utilityservice.service.registration.CustomerService;
 
 /**
  * @author Shravya Peddiraju
- * 
  */
 @Controller
 public class RegistrationController {

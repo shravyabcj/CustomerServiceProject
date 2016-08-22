@@ -30,7 +30,7 @@ public class CustomerService {
 
 	/**
 	 * @param customer
-	 * @return cust_id 
+	 * @return customer details and serviceplanID and serviceplan 
 	 * Inserts the customer details in the database
 	 */
 	public String[] saveCustomer(Customer customer) {
@@ -64,7 +64,7 @@ public class CustomerService {
 
 	/**
 	 * @param id
-	 * @return 
+	 * @return customer details
 	 * Rest call to get the customer details from the
 	 * CustomerServiceInfo application
 	 */

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Shravya Peddiraju
- * 
+ * This class sends the message to the queue.
  */
 @Component("queueSender")
 public class JmsQueueSender {
@@ -20,6 +20,10 @@ public class JmsQueueSender {
 	@Autowired
 	private JmsTemplate jmsTemplate;
 
+	/**
+	 * @param text
+	 * This method sends the messsage to the queue.
+	 */
 	public void sendMessage(final String text) {
 
 		this.jmsTemplate.send(new MessageCreator() {

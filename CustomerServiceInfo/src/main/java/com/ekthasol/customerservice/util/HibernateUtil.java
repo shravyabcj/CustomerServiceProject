@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 /**
  * @author Shravya Peddiraju
+ * Class to open the Hibernate session.
  */
 public class HibernateUtil {
 
